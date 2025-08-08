@@ -18,6 +18,17 @@ file_words1 = Initialization.readlines() # return a list, every item on it is li
 file_words2 = [x[:-1] for x in file_words1] # we have a built-in functions to solve this problem but i prefer SLICING to solve it, this technique loops inside every item in the list and kills the last character on it which is \n character.
 # print(file_words2) # for Debbuging
 
+                                               # ->>>First and Second steps.
+                                                # ->>>Ending the game and the score counter.
+
+
+count = 0
+while 1:# starting the game and make it continuous until the user cutoff the infinite loop or exit the game.
+ Random_word = random.choice(file_words2) # random.choice() is a built_in function that choose a random item from a list ,dict and tuple. I put it here to generate a new Random_word every time the game starts.
+ i = 0
+ Guesses = [] # A list to store all user guessed words.
+ Status = False # a boolean to inform the user that he has lost if he did not guess random_word correctly in his 6 tries.
+ # print("Random word from Dataset is :",Random_word) # for Debbuging
 
 
 
