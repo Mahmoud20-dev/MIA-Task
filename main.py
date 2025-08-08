@@ -55,6 +55,14 @@ while 1:# starting the game and make it continuous until the user cutoff the inf
                         print(f"{guesses[y]} is a valid letter in the Random_word") # second possible hint to the user
                 else:
                         print(f"{guesses[y]} is not a valid letter in the Random_word") # third possible hint to the user
+    elif guesses == "giveup": # Break loop to end the game when the user gives up.
+        print("YOU LOST!")
+        print(f"The secret word is {Random_word}")
+        count -= 1
+        print(f"Your score is {count}")
+        Status = True
+        break
+
 
 
 
