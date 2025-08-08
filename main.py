@@ -29,6 +29,34 @@ while 1:# starting the game and make it continuous until the user cutoff the inf
  Guesses = [] # A list to store all user guessed words.
  Status = False # a boolean to inform the user that he has lost if he did not guess random_word correctly in his 6 tries.
  # print("Random word from Dataset is :",Random_word) # for Debbuging
+ while i < 6: # outer while loop is number of rows(number of guessed words) and inner loop(y) is number of columns (number of letters of the word).
+
+    guesses = input(f"Enter your {i+1} guess :") # Takes user input.
+
+    if guesses in file_words2: # Validity of the word
+        Guesses.append(guesses) # Append every user input guessed word to our list
+        for x in Guesses:
+            print(f"       {x.upper()}       ") # printing output as [6][5] grid on the terminal.
+        # print("WORD VALID") # for Debbuging
+
+        if guesses == Random_word: # User has guessed the word correctly
+            print("YOU WIN!")
+            print(f"The secret word is {Random_word}")
+            count += 1
+            print(f"Your score is {count}") # Counter that indicates the score
+            Status = True
+            break
+
+        elif guesses != Random_word: # Word is valid but not the Random_word
+            for y in range (5):
+                if guesses[y] in Random_word and y == Random_word.index(guesses[y]): # index() is a built-in function to get our letter index in Random_word, we used it to compare letter index in user guessed word and in Random_word.
+                        print(f"{guesses[y]} is a valid letter in the Random_word with the same index") # first possible hint to the user
+                elif guesses[y] in Random_word:
+                        print(f"{guesses[y]} is a valid letter in the Random_word") # second possible hint to the user
+                else:
+                        print(f"{guesses[y]} is not a valid letter in the Random_word") # third possible hint to the user
+
+
 
 
 
