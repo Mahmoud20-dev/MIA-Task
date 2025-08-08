@@ -62,6 +62,11 @@ while 1:# starting the game and make it continuous until the user cutoff the inf
         print(f"Your score is {count}")
         Status = True
         break
+    elif guesses not in file_words2:
+        print("WORD NOT VALID, Try again!") # The word not valid (not in the dataset)
+        i -= 1 # I used this technique to repeat the iteration in which the user input was invalid word (not from the dataset)
+    i += 1 # Increase the increment by one every iteration
+
 
 
 
