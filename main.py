@@ -8,6 +8,16 @@
 #Game ends when user has guessed the word correctly before 6 tries or the user has finished his 6 tries or (additional property) ->> (user input is giveup). //ok
 #Score increase by 1 if user guessed the word correctly and vice versa it decreased by 1 if user failed to guess the word. //ok
 
+ #بسم الله
+import random
+                                                             # ->>>Initialization.
+
+
+Initialization = open('words.txt','r')
+file_words1 = Initialization.readlines() # return a list, every item on it is line from the file. But we have a problem here, list is created by \n which is an indication to a new line in the end of every item in the list. we have many techniques to solve this problem.
+file_words2 = [x[:-1] for x in file_words1] # we have a built-in functions to solve this problem but i prefer SLICING to solve it, this technique loops inside every item in the list and kills the last character on it which is \n character.
+# print(file_words2) # for Debbuging
+
 
 
 
