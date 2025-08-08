@@ -67,6 +67,14 @@ while 1:# starting the game and make it continuous until the user cutoff the inf
         i -= 1 # I used this technique to repeat the iteration in which the user input was invalid word (not from the dataset)
     i += 1 # Increase the increment by one every iteration
 
+  
+  if Status == False:
+   print("YOU LOST!") # failed to guess the Random_word
+   print(f"The secret word is {Random_word}")
+   count -= 1 # Counter that indicates the score
+   print(f"Your score is {count}")  
+
+
 
 
 
